@@ -115,9 +115,8 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
     else
       return 0;
     }
-    ```
 
-  int PitchAnalyzer::compute_zcr(std::vector<float> &x) const
+  int PitchAnalyzer::compute*zcr(std::vector<float> &x) const
   {
   int sum = 0;
   for (int i = 0; i < x.size(); i++)
@@ -127,10 +126,9 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
   sum++;
   }
   }
-  return (int)samplingFreq / (2 _ (x.size() - 1)) _ sum;
+  return (int)samplingFreq / (2 * (x.size() - 1)) \_ sum;
   }
-
-  ````
+  ```
 
   <small>No olvidar que también hay que añadir el código correspondiente al fichero **.h**.
 
@@ -179,7 +177,7 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
   Progress: 100.00%
   Best performance: 91.80%
   Parameters: p=25, r1=0.60, rlag=0.60, z=1300
-  ````
+  ```
 
   <small>Como puede observarse, se ha hecho una llamada al binario `parameter_search` cuya ejecución tardó alrededor de 5-10 minutos.
 
