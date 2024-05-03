@@ -116,17 +116,17 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
       return 0;
     }
 
-  int PitchAnalyzer::compute*zcr(std::vector<float> &x) const
+  int PitchAnalyzer::compute_zcr(std::vector<float> &x) const
   {
-  int sum = 0;
-  for (int i = 0; i < x.size(); i++)
-  {
-  if (sgn(x[i]) != sgn(x[i - 1]))
-  {
-  sum++;
-  }
-  }
-  return (int)samplingFreq / (2 * (x.size() - 1)) \_ sum;
+    int sum = 0;
+    for (int i = 0; i < x.size(); i++)
+    {
+      if (sgn(x[i]) != sgn(x[i - 1]))
+      {
+        sum++;
+      }
+    }
+    return (int)samplingFreq / (2 * (x.size() - 1)) * sum;
   }
   ```
 
@@ -137,7 +137,8 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
     * Potencia
     * r[1] (autocorrelación a distancia 1)
     * r[lag] (autocorrelación a distancia del primer máximo fuera del origen)
-    * zcr (zero crossing rate)</small>
+    * zcr (zero crossing rate)
+  </small>
 
     ![Visualización de los 4 parámetros mencionados de un señal de prueba wav](img/joint_signal_plots.png)
 
