@@ -68,7 +68,7 @@ int main(int argc, const char * argv[])  {
       return 3;
     }
     
-    cout << "### Compare " << file_f0ref[i] << " and " << ftest << "\n";
+    //cout << "### Compare " << file_f0ref[i] << " and " << ftest << "\n";
 
 
     int diff_frames = f0ref.size() - f0test.size();

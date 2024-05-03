@@ -24,3 +24,23 @@ pitch_evaluate = executable(
     link_with: lib_pav,
     install: true,
 )
+
+# parameter_search Program
+exe = 'parameter_search'
+src = 'parameter_search.cpp'
+
+parameter_search = executable(
+    exe, 
+    sources: src,  
+    install: true,
+)
+
+# db_parameter_search Program
+exe = 'db_parameter_search'
+src = 'db_parameter_search.cpp'
+
+db_parameter_search = executable(
+    exe, 
+    sources: src,  
+    install: true,
+)
