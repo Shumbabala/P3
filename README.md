@@ -115,7 +115,8 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
     else
       return 0;
     }
-
+    ```
+  ```cpp
   int PitchAnalyzer::compute_zcr(std::vector<float> &x) const
   {
     int sum = 0;
@@ -132,13 +133,12 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
 
   <small>No olvidar que también hay que añadir el código correspondiente al fichero **.h**.
 
-  Si nos fijamos en la siguiente 4 propiedades de la señal de audio, podemos tener una mejor idea de cuales son más útiles en cuanto a su utilización para la detección de presencia de sonoridad y consecuentemente de pitch. Es un concepto muy relacionado con la P2 donde se implementó el VAD teniendo en cuenta algunas de estas propiedades del señal de voz. En concreto las 4 propiedades son:
+  Si nos fijamos en la siguiente 4 propiedades de la señal de audio, podemos tener una mejor idea de cuales son más útiles en cuanto a su utilización para la detección de presencia de sonoridad y consecuentemente de pitch. Es un concepto muy relacionado con la P2 donde se implementó el VAD teniendo en cuenta algunas de estas propiedades del señal de voz. En concreto las 4 propiedades son: </small>
 
     * Potencia
     * r[1] (autocorrelación a distancia 1)
     * r[lag] (autocorrelación a distancia del primer máximo fuera del origen)
     * zcr (zero crossing rate)
-  </small>
 
     ![Visualización de los 4 parámetros mencionados de un señal de prueba wav](img/joint_signal_plots.png)
 
@@ -152,12 +152,12 @@ Recuerde realizar el _pull request_ al repositorio original una vez completada l
   	Aunque puede usar el propio Wavesurfer para obtener la representación, se valorará
    	el uso de alternativas de mayor calidad (particularmente Python).
 
-    <small>A continuación vemos una comparación de 2 gráficas (basadas en nuestro fichero de prueba de confianza `prueba.f0`), la primera siendo un **plot** del pitch de referencia (extraído de WaveSurfer) y la segunda otro **plot** pero esta vez del pitch estimado con nuestro estimador (con los mejores parámetros extraídos por el programa `parameter_search`, que en este caso ha sido:
+    <small>A continuación vemos una comparación de 2 gráficas (basadas en nuestro fichero de prueba de confianza `prueba.f0`), la primera siendo un **plot** del pitch de referencia (extraído de WaveSurfer) y la segunda otro **plot** pero esta vez del pitch estimado con nuestro estimador (con los mejores parámetros extraídos por el programa `parameter_search`, que en este caso ha sido:</small>
 
       * Potencia = 40
       * r[1] = 0.6
       * r[lag] = 0.6
-      * zcr = 1300)</small>
+      * zcr = 1300)
 
     ![imagen del pitch de referencia extraído con WaveSurfer](img/wavesurfer_predictor.png)
 
